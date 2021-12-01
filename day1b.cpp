@@ -25,7 +25,7 @@ int main()
 
     for (int i = 3; i < inputs.size(); ++i)
     {
-        if (inputs[i] > inputs[i-3])
+        if (inputs[i] > inputs[i - 3])
             counter++;
     }
 
