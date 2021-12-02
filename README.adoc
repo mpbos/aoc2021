@@ -3,6 +3,5 @@
 How to run for example day1:
 [source, bash]
 ----
-g++ -o day1 day1.cpp
-./day1
+make && ./day1
 ----
