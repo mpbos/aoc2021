@@ -8,7 +8,7 @@ int main()
 {
     vector<string> inputs;
     string line;
-    ifstream myfile("input2.txt");
+    ifstream myfile("inputs/input2.txt");
     if (myfile.is_open())
     {
         while (getline(myfile, line))

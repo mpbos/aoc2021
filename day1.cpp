@@ -20,7 +20,7 @@ int main()
 {
     vector<int> inputs;
     string line;
-    ifstream myfile("input1.txt");
+    ifstream myfile("inputs/input1.txt");
     if (myfile.is_open())
     {
         while (getline(myfile, line))
