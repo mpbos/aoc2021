@@ -1,28 +1,6 @@
-#include <fstream>
-#include <iostream>
-#include <vector>
+#include "load_inputs.h"
 
 using namespace std;
-
-/// Load the inputs from the input file
-vector<string> loadInputs(const string& filename)
-{
-    vector<string> inputs;
-    string line;
-    ifstream myfile("inputs/" + filename);
-    if (myfile.is_open())
-    {
-        while (getline(myfile, line))
-        {
-            inputs.push_back(line);
-        }
-        myfile.close();
-    }
-    else
-        cout << "Unable to open file";
-
-    return inputs;
-}
 
 int main()
 {
@@ -35,8 +13,8 @@ int main()
 
     for (auto& line : inputs)
     {
-        auto side = line.substr(0, line.find(" "));
-        auto number = stoi(line.substr(line.find(" ") + 1, 1));
+        auto side = line.substr(0, line.find(' '));
+        auto number = stoi(line.substr(line.find(' ') + 1, 1));
         if (side == "up")
         {
             y_a -= number;

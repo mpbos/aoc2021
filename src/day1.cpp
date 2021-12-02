@@ -1,36 +1,14 @@
-#include <fstream>
-#include <iostream>
-#include <vector>
+#include "load_inputs.h"
 
 using namespace std;
 
-/// Load the inputs from the input file
-vector<int> loadInputs(const string& filename)
-{
-    vector<int> inputs;
-    string line;
-    ifstream myfile("inputs/" + filename);
-    if (myfile.is_open())
-    {
-        while (getline(myfile, line))
-        {
-            inputs.push_back(stoi(line));
-        }
-        myfile.close();
-    }
-    else
-        cout << "Unable to open file";
-
-    return inputs;
-}
-
 /// Computes how many samples have an increasing value
-int computeIncreases(int timestep, const vector<int>& inputs)
+int computeIncreases(int timestep, const vector<string>& inputs)
 {
     int counter = 0;
     for (int i = timestep; i < inputs.size(); ++i)
     {
-        if (inputs[i] > inputs[i - timestep])
+        if (stoi(inputs[i]) > stoi(inputs[i - timestep]))
             counter++;
     }
     return counter;

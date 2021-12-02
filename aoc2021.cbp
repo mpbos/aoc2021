@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="aoc2021"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/martijn/Projects/aoc2021"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/martijn/Projects/aoc2021"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/martijn/Projects/aoc2021"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="day2">
+				<Option output="/home/martijn/Projects/aoc2021/day2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/martijn/Projects/aoc2021"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 day2"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="day2/fast">
+				<Option output="/home/martijn/Projects/aoc2021/day2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/martijn/Projects/aoc2021"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 day2/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="day1">
+				<Option output="/home/martijn/Projects/aoc2021/day1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/martijn/Projects/aoc2021"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 day1"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="day1/fast">
+				<Option output="/home/martijn/Projects/aoc2021/day1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/martijn/Projects/aoc2021"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 day1/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/martijn/Projects/aoc2021/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/martijn/Projects/aoc2021/src/day1.cpp">
+			<Option target="day1"/>
+		</Unit>
+		<Unit filename="/home/martijn/Projects/aoc2021/src/day2.cpp">
+			<Option target="day2"/>
+		</Unit>
+		<Unit filename="/home/martijn/Projects/aoc2021/src/load_inputs.cpp">
+			<Option target="day2"/>
+			<Option target="day1"/>
+		</Unit>
+		<Unit filename="/home/martijn/Projects/aoc2021/src/load_inputs.h">
+			<Option target="day2"/>
+			<Option target="day1"/>
+		</Unit>
+		<Unit filename="/home/martijn/Projects/aoc2021/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
