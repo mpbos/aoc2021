@@ -4,11 +4,12 @@
 
 using namespace std;
 
-int main()
+/// Load the inputs from the input file
+vector<string> loadInputs(const string& filename)
 {
     vector<string> inputs;
     string line;
-    ifstream myfile("inputs/input2.txt");
+    ifstream myfile("inputs/" + filename);
     if (myfile.is_open())
     {
         while (getline(myfile, line))
@@ -19,6 +20,13 @@ int main()
     }
     else
         cout << "Unable to open file";
+
+    return inputs;
+}
+
+int main()
+{
+    auto inputs = loadInputs("input2.txt");
 
     int x = 0;
     int y_a = 0;
