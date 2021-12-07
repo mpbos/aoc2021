@@ -77,8 +77,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/martijn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/home/martijn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -143,6 +143,19 @@ day2/fast:
 .PHONY : day2/fast
 
 #=============================================================================
+# Target rules for targets named day3
+
+# Build rule for target.
+day3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 day3
+.PHONY : day3
+
+# fast build rule for target.
+day3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day3.dir/build.make CMakeFiles/day3.dir/build
+.PHONY : day3/fast
+
+#=============================================================================
 # Target rules for targets named day7
 
 # Build rule for target.
@@ -203,6 +216,30 @@ src/day2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/day2.cpp.s
 .PHONY : src/day2.cpp.s
 
+src/day3.o: src/day3.cpp.o
+.PHONY : src/day3.o
+
+# target to build an object file
+src/day3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day3.dir/build.make CMakeFiles/day3.dir/src/day3.cpp.o
+.PHONY : src/day3.cpp.o
+
+src/day3.i: src/day3.cpp.i
+.PHONY : src/day3.i
+
+# target to preprocess a source file
+src/day3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day3.dir/build.make CMakeFiles/day3.dir/src/day3.cpp.i
+.PHONY : src/day3.cpp.i
+
+src/day3.s: src/day3.cpp.s
+.PHONY : src/day3.s
+
+# target to generate assembly for a file
+src/day3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day3.dir/build.make CMakeFiles/day3.dir/src/day3.cpp.s
+.PHONY : src/day3.cpp.s
+
 src/day7.o: src/day7.cpp.o
 .PHONY : src/day7.o
 
@@ -234,6 +271,7 @@ src/load_inputs.o: src/load_inputs.cpp.o
 src/load_inputs.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/src/load_inputs.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day3.dir/build.make CMakeFiles/day3.dir/src/load_inputs.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/load_inputs.cpp.o
 .PHONY : src/load_inputs.cpp.o
 
@@ -244,6 +282,7 @@ src/load_inputs.i: src/load_inputs.cpp.i
 src/load_inputs.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/src/load_inputs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day3.dir/build.make CMakeFiles/day3.dir/src/load_inputs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/load_inputs.cpp.i
 .PHONY : src/load_inputs.cpp.i
 
@@ -254,6 +293,7 @@ src/load_inputs.s: src/load_inputs.cpp.s
 src/load_inputs.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/src/load_inputs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day3.dir/build.make CMakeFiles/day3.dir/src/load_inputs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/load_inputs.cpp.s
 .PHONY : src/load_inputs.cpp.s
 
@@ -267,6 +307,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... day1"
 	@echo "... day2"
+	@echo "... day3"
 	@echo "... day7"
 	@echo "... src/day1.o"
 	@echo "... src/day1.i"
@@ -274,6 +315,9 @@ help:
 	@echo "... src/day2.o"
 	@echo "... src/day2.i"
 	@echo "... src/day2.s"
+	@echo "... src/day3.o"
+	@echo "... src/day3.i"
+	@echo "... src/day3.s"
 	@echo "... src/day7.o"
 	@echo "... src/day7.i"
 	@echo "... src/day7.s"

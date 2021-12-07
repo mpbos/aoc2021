@@ -36,4 +36,4 @@ int main()
     cout << "Answer b: " << x * y_b << endl;
 
     return 0;
-};
+}

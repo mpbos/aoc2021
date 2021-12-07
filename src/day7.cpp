@@ -42,4 +42,4 @@ int main()
     cout << "Answer b: " << lowest_fuel_b << endl;
 
     return 0;
-};
+}

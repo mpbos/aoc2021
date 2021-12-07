@@ -28,4 +28,4 @@ int main()
     cout << "Answer b: " << counter_b << endl;
 
     return 0;
-};
+}
