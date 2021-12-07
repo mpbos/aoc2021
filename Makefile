@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/martijn/Projects/aoc2021
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/martijn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,6 +74,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/martijn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named day1
+
+# Build rule for target.
+day1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 day1
+.PHONY : day1
+
+# fast build rule for target.
+day1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/build
+.PHONY : day1/fast
+
+#=============================================================================
 # Target rules for targets named day2
 
 # Build rule for target.
@@ -130,17 +143,17 @@ day2/fast:
 .PHONY : day2/fast
 
 #=============================================================================
-# Target rules for targets named day1
+# Target rules for targets named day7
 
 # Build rule for target.
-day1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 day1
-.PHONY : day1
+day7: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 day7
+.PHONY : day7
 
 # fast build rule for target.
-day1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/build
-.PHONY : day1/fast
+day7/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/build
+.PHONY : day7/fast
 
 src/day1.o: src/day1.cpp.o
 .PHONY : src/day1.o
@@ -190,13 +203,38 @@ src/day2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/day2.cpp.s
 .PHONY : src/day2.cpp.s
 
+src/day7.o: src/day7.cpp.o
+.PHONY : src/day7.o
+
+# target to build an object file
+src/day7.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/day7.cpp.o
+.PHONY : src/day7.cpp.o
+
+src/day7.i: src/day7.cpp.i
+.PHONY : src/day7.i
+
+# target to preprocess a source file
+src/day7.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/day7.cpp.i
+.PHONY : src/day7.cpp.i
+
+src/day7.s: src/day7.cpp.s
+.PHONY : src/day7.s
+
+# target to generate assembly for a file
+src/day7.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/day7.cpp.s
+.PHONY : src/day7.cpp.s
+
 src/load_inputs.o: src/load_inputs.cpp.o
 .PHONY : src/load_inputs.o
 
 # target to build an object file
 src/load_inputs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/src/load_inputs.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/load_inputs.cpp.o
 .PHONY : src/load_inputs.cpp.o
 
 src/load_inputs.i: src/load_inputs.cpp.i
@@ -204,8 +242,9 @@ src/load_inputs.i: src/load_inputs.cpp.i
 
 # target to preprocess a source file
 src/load_inputs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/src/load_inputs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/load_inputs.cpp.i
 .PHONY : src/load_inputs.cpp.i
 
 src/load_inputs.s: src/load_inputs.cpp.s
@@ -213,8 +252,9 @@ src/load_inputs.s: src/load_inputs.cpp.s
 
 # target to generate assembly for a file
 src/load_inputs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/day1.dir/build.make CMakeFiles/day1.dir/src/load_inputs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day2.dir/build.make CMakeFiles/day2.dir/src/load_inputs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/day7.dir/build.make CMakeFiles/day7.dir/src/load_inputs.cpp.s
 .PHONY : src/load_inputs.cpp.s
 
 # Help Target
@@ -227,12 +267,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... day1"
 	@echo "... day2"
+	@echo "... day7"
 	@echo "... src/day1.o"
 	@echo "... src/day1.i"
 	@echo "... src/day1.s"
 	@echo "... src/day2.o"
 	@echo "... src/day2.i"
 	@echo "... src/day2.s"
+	@echo "... src/day7.o"
+	@echo "... src/day7.i"
+	@echo "... src/day7.s"
 	@echo "... src/load_inputs.o"
 	@echo "... src/load_inputs.i"
 	@echo "... src/load_inputs.s"

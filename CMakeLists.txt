@@ -6,3 +6,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(day1 src/day1.cpp src/load_inputs.cpp src/load_inputs.h)
 add_executable(day2 src/day2.cpp src/load_inputs.cpp src/load_inputs.h)
+
+add_executable(day7 src/day7.cpp src/load_inputs.cpp src/load_inputs.h)

@@ -3,7 +3,6 @@ CMakeFiles/**
 .idea/**
 CMakeCache.txt
 cmake_install.cmake
-day*
 aoc2021.cbp
 Testing/**
-
+/day*
